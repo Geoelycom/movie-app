@@ -50,5 +50,5 @@ const createAutocomplete = (config) => {
         if (!root.contains(event.target)) {
             dropdown.classList.remove('is-active');
         }
-    });
+    })
 }
