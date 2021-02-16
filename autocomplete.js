@@ -44,5 +44,5 @@ const createAutocomplete = ({ root, renderOption, onOptionSelect, inputValue, fe
         if (!root.contains(event.target)) {
             dropdown.classList.remove('is-active');
         }
-    });
+    })
 }
