@@ -1,31 +1,50 @@
-const fetchData = async(searchItem) => {
-    const response = await axios.get(' http://www.omdbapi.com/', {
-        params: {
-            apikey: '85c1cc6e',
-            s: searchItem
-        }
-
-    });
-    if (response.data.Error) {
-        return [];
-    }
-
-    return response.data.Search;
-};
+ createAutocomplete({
+     root: document.querySelector('.autocomplete'),
+     renderOption(movie) {
+         const imgSrc = movie.Poster === 'N/A' ? '' : movie.Poster;
+         return ` 
+        <img src = "${imgSrc}"/>
+    ${movie.Title} (${movie.Year})
 
 
-const onMovieSelect = async movie => {
-    const response = await axios.get(' http://www.omdbapi.com/', {
-        params: {
-            apikey: '85c1cc6e',
-            i: movie.imdbID
-        }
-    });
-    document.querySelector('#summary').innerHTML = movieTemplate(response.data);
-};
+`;
+     },
+     onOptionSelect() {
+         onMovieSelect(movie);
+     },
+     inputValue(movie) {
+         return movie.Title;
+     },
+     async fetchData(searchTerm) {
+         const response = await axios.get(' http://www.omdbapi.com/', {
+             params: {
+                 apikey: '85c1cc6e',
+                 s: searchTerm
+             }
 
-const movieTemplate = movieDetail => {
-    return `
+         });
+         if (response.data.Error) {
+             return [];
+         }
+
+         return response.data.Search;
+     },
+
+
+ });
+
+ const onMovieSelect = async movie => {
+     const response = await axios.get(' http://www.omdbapi.com/', {
+         params: {
+             apikey: '85c1cc6e',
+             i: movie.imdbID
+         }
+     });
+     document.querySelector('#summary').innerHTML = movieTemplate(response.data);
+ };
+
+ const movieTemplate = movieDetail => {
+     return `
         <article class="media">
           <figure class="media-left">
             <p class="image">
@@ -66,4 +85,4 @@ const movieTemplate = movieDetail => {
             </article>
 
     `;
-};
+ };
