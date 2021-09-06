@@ -18,19 +18,21 @@ This project is an inspiration from 2020 steve and coltee web-development bootca
 
 ## Live Demo 👀
 
-[Live Demo Link]( https://geoelycom.github.io/movie-app)
+[Live Demo Link]( https://geoelycom.github.io/movie-app/)
 
 ### Install
 
 To get a local copy up and running follow these simple example steps.
 - Open terminal
-- Clone this project by command git clone https://github.com/Geoelycom/Conference-website.git
-- Cd Conference-website folder
+- Clone this project by command git clone https://github.com/Geoelycom/movie-app.git
+- Cd movie-app
 - Open index.html in browser
 
 ## Getting Started 
 - Index.html is the home marke up that will show as the first page in the browser .
 - You will find seperate css files for each of the pages
+- utils.js contains the api code and data use use for this project
+- autocomplete.j contains the component for auto-completion where the app can guess the movie the user is trying to search by bringing up suggestion.
 
 ### Prerequisites
 
