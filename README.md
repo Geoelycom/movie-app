@@ -18,7 +18,7 @@ This project is an inspiration from 2020 steve and coltee web-development bootca
 
 ## Live Demo 👀
 
-[Live Demo Link]( https://geoelycom.github.io/Conference-website/)
+[Live Demo Link]( https://geoelycom.github.io/movie-app)
 
 ### Install
 
@@ -30,9 +30,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Getting Started 
 - Index.html is the home marke up that will show as the first page in the browser .
-- about.html is the second which is the about page
 - You will find seperate css files for each of the pages
-- img folder contains all the images and icons used in building this project(Icons are gotten from Flaticon). images are gotten from unsplash and Google.
 
 ### Prerequisites
 
