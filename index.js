@@ -14,7 +14,7 @@
      async fetchData(searchTerm) {
          const response = await axios.get(' http://www.omdbapi.com/', {
              params: {
-                 apikey: '85c1cc6e',
+                 apikey: '13f554b8',
                  s: searchTerm
              }
 
@@ -56,7 +56,7 @@
  const onMovieSelect = async(movie, summaryElement, side) => {
      const response = await axios.get(' http://www.omdbapi.com/', {
          params: {
-             apikey: '85c1cc6e',
+             apikey: '13f554b8',
              i: movie.imdbID
          }
      });
