@@ -12,7 +12,7 @@
          return movie.Title;
      },
      async fetchData(searchTerm) {
-         const response = await axios.get(' http://www.omdbapi.com/', {
+         const response = await axios.get('http://www.omdbapi.com/', {
              params: {
                  apikey: '13f554b8',
                  s: searchTerm
